@@ -81,7 +81,9 @@ export default (makeStore: MakeStore, config?: Config) => {
                 const {initialState} = props;
 
                 if (defaultedConfig.debug)
-                    console.log('4. WrappedApp.render created new store with initialState', initialState);
+                    console.log('4. WrappedApp.render created new store with initialState', initialState, context.ctx);
+
+                console.log("4a. context", context);
 
                 this.store = initStore({
                     ctx: context.ctx,
